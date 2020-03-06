@@ -28,6 +28,9 @@ header {
     transition: all 0.1s ease-out;
     &:hover {
         transform: translateX(5rem);
+        @include tab {
+            transform: translateX(2rem);
+        }
     }
     
     a {
@@ -39,6 +42,10 @@ header {
     }
     ul {
         position: relative;
+        @include tab {
+            transform: translateX(-2rem);
+            line-height: 5rem;
+        }
         &:hover .btn {
             opacity: 1;
         }
@@ -52,10 +59,15 @@ header {
         top: -15%;
         left: -90%;
         border-radius: 50%;
-        border: 2px solid $color-clear;
+        border: 3px none $color-clear;
         transition: all 1s ease;
+        @include tab {
+            width: 30rem;
+            height: 30rem;
+        }
     }
     ul:hover::before {
+        border: 3px solid $color-pink-high;
         box-shadow: inset 0 0 700px 20px $color-pink-high;
     }
 }
@@ -64,6 +76,7 @@ header {
     .name {
         color: $color-wt;
         box-shadow: inset 0 0 500px 5px $color-pink;
+
         span {
             color: $color-pink-high;
         }
@@ -78,7 +91,7 @@ header {
         top: -30%;
         left: -50%;
         z-index: 1;
-        background-color: $color-pink-high;
+        background: linear-gradient(45deg,$color-wt, $color-clear, $color-pink, $color-pink-high);
         box-shadow: inset 0 0 200px 50px $color-clear;
         width: 100%;
         height: 100%;
@@ -128,6 +141,7 @@ header {
     left: -10%;
     background: linear-gradient(90deg,$color-wt, $color-clear, $color-pink, $color-pink-high);
     transform: rotate(5deg);
+    transition: all 1s ease;
 }
 
 #menu {
@@ -183,6 +197,10 @@ header {
 }
 
 #view {
+    .section-title {
+        color: $color-wt;
+        text-shadow: 1px 1px 0 #000;
+    }
     .lg {
         position: relative;
     }

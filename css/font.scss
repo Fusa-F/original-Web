@@ -26,32 +26,52 @@ html {
 
 body {
     font-size: 1.6em;
-    font-family: 'Noto Sans JP', ;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 a,
 .section-title {
-    font-family: 'Kaushan Script', ;
+    font-family: 'Kaushan Script', 'arial black';
     letter-spacing: 2px;
 }
 
 h3 {
     font-size: 10rem;
+    @include sp {
+        font-size: 6rem;
+    }
 }
 
 header {
     font-size: 4rem;
     line-height: 6rem;
+    @include tab {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
 }
 
 #top {
-    font-family: 'Kaushan Script', ;
+    font-family: 'Kaushan Script', 'arial black';
     letter-spacing: 10px;
     h1 {
         font-size: 12rem;
+        @include pc {
+            font-size: 6rem;
+        }
+        @include tab {
+            font-size: 3rem;
+            line-height: 5rem;
+        }
     }
     h2 {
         font-size: 4rem;
+        @include pc {
+            font-size: 2rem;
+        }
+        @include tab {
+            font-size: 1rem;
+        }
     }
 }
 

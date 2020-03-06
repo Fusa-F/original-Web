@@ -37,6 +37,9 @@ section {
 
 .section-title {
     z-index: 101;
+    opacity: 0;
+    transform: translateY(20rem);
+    transition: all 0.5s ease;
 }
 
 .inner {
@@ -50,6 +53,7 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
+
 }
 
 #top {
@@ -81,6 +85,9 @@ header {
         position: absolute;
         top: -20%;
         left: 45%;
+        @include tab {
+            left: 30%;
+        }
     }
     .container {
         position: relative;
@@ -89,7 +96,12 @@ header {
             margin: 0 0 0 auto;
             img {
                 width: 60rem;
+                max-width: 100%;
                 height: auto;
+                @include tab {
+                    width: 100vw;
+                    opacity: 0.8;
+                }
             }
         }
         .txt-box {
@@ -98,12 +110,20 @@ header {
             bottom: 20%;
             left: 10%;
             z-index: 2;
+            @include tab {
+                left: 0;
+                width: 30rem;
+                margin: 0 5rem 0;
+            }
+            @include sp {
+                bottom: 10%;
+            }
         }
     }
 }
 
 #menu {
-    margin-top: 16rem;
+    margin-top: 24rem;
     position: relative;
     .section-title {
         position: absolute;
@@ -112,6 +132,15 @@ header {
     }
     .container {
         display: flex;
+        width: 80vw;
+        max-width: 100%;
+        @include pc {
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        @include sp {
+            width: 100vw;
+        }
         ul {
             width: 40rem;
             max-width: 100%;
@@ -120,16 +149,26 @@ header {
         img {
             width: 40rem;
             height: 40rem;
+            @include sp {
+                width: 20rem;
+                height: 20rem;
+            }
         }
         .slider {
             margin-left: 8rem;
         }
         .slider-txt {
+            width: 40rem;
+            max-width: 100%;
             div {
                 text-align: start;
                 margin: 8rem 0 0 2rem;
                 padding: 1rem;
-                width: 100%;
+                width: 40rem;
+                max-width: 100%;
+                @include tab {
+                    width: 30rem;
+                }
             }
         }
     }
@@ -159,14 +198,30 @@ header {
     }
     .sm {
         margin: -24rem 0 0 auto;
+        @include sp {
+            margin-top: -16rem;
+        }
         img {
             width: 40vw;
+
         }
+    }
+
+    .inner {
+        p {
+            width: 40rem;
+            max-width: 100%;
+            margin: 8rem;
+            @include tab {
+                width: 20rem;
+            }
+        }    
     }
 }
 
 #reserve {
-    margin-top: 16rem;
+    clear: right;
+    margin-top: 24rem;
     position: relative;
     .section-title {
         position: absolute;
@@ -191,7 +246,14 @@ footer {
         margin: 0 auto;
         padding: 8rem 0;
         display: flex;
+        @include tab {
+            flex-direction: column;
+        }
         .access-txt {
+            @include tab {
+                text-align: center;
+                margin-bottom: 4rem;
+            }
             h4 {
                 margin-bottom: 2rem;
             }
@@ -209,6 +271,9 @@ footer {
         .place {
             width: fit-content;
             margin: 0 0 0 auto;
+            @include tab {
+                margin: 0 auto;
+            }
         }    
     }
     .copy {

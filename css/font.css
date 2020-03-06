@@ -5,12 +5,12 @@ html {
 
 body {
   font-size: 1.6em;
-  font-family: "Noto Sans JP";
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 a,
 .section-title {
-  font-family: "Kaushan Script";
+  font-family: 'Kaushan Script', 'arial black';
   letter-spacing: 2px;
 }
 
@@ -18,13 +18,26 @@ h3 {
   font-size: 10rem;
 }
 
+@media (max-width: 480px) {
+  h3 {
+    font-size: 6rem;
+  }
+}
+
 header {
   font-size: 4rem;
   line-height: 6rem;
 }
 
+@media (max-width: 680px) {
+  header {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
 #top {
-  font-family: "Kaushan Script";
+  font-family: 'Kaushan Script', 'arial black';
   letter-spacing: 10px;
 }
 
@@ -32,8 +45,33 @@ header {
   font-size: 12rem;
 }
 
+@media (max-width: 1024px) {
+  #top h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 680px) {
+  #top h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
+
 #top h2 {
   font-size: 4rem;
+}
+
+@media (max-width: 1024px) {
+  #top h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  #top h2 {
+    font-size: 1rem;
+  }
 }
 
 #menu .slider-txt h4 {
