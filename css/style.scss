@@ -42,6 +42,12 @@ section {
     transition: all 0.5s ease;
 }
 
+.fadein {
+    opacity: 0;
+    transform: translateY(20rem);
+    transition: all 1s ease-out;
+}
+
 .inner {
     width: 1200px;
     max-width: 100%;
@@ -198,6 +204,7 @@ header {
     }
     .sm {
         margin: -24rem 0 0 auto;
+        float: right;
         @include sp {
             margin-top: -16rem;
         }

@@ -23,6 +23,30 @@ section {
   transition: all 0.5s ease;
 }
 
+.fadein {
+  opacity: 0;
+  -webkit-transform: translateY(20rem);
+          transform: translateY(20rem);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.faderight {
+  opacity: 0;
+  -webkit-transform: translateX(20rem);
+          transform: translateX(20rem);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.fadeleft {
+  opacity: 0;
+  -webkit-transform: translateX(20rem);
+          transform: translateX(20rem);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
 .inner {
   width: 1200px;
   max-width: 100%;
@@ -229,6 +253,7 @@ header {
 
 #view .sm {
   margin: -24rem 0 0 auto;
+  float: right;
 }
 
 @media (max-width: 480px) {
